@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - Coffee Shop</title>
+<style>
+    /* RESET */
+    * { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; }
+
+body { background: #f9f9f9; padding-bottom: 70px; }
+
+/* BOTTOM NAVBAR */
+.bottom-navbar {
+    position: fixed; bottom:0; left:0; width:100%; height:60px;
+    background:#fff; display:flex; justify-content:space-around;
+    align-items:center; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.bottom-navbar .nav-item a, .bottom-navbar .nav-item {
+    display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#555;
+    font-size:12px; cursor:pointer; transition: color 0.2s;
+}
+.bottom-navbar .nav-item.active a, .bottom-navbar .nav-item.active { color:#ff5722; }
+.bottom-navbar .nav-item:hover a { color:#ff5722; }
+
+/* MENU SECTION */
+.menu-section { padding: 20px; }
+.menu-title { font-size: 1.5rem; color:#333; margin-bottom:10px; margin-top:20px; }
+
+.menu-items {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    gap:15px;
+}
+
+.menu-card {
+    background:#fff; border-radius:12px; overflow:hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor:pointer;
+}
+.menu-card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+
+.menu-card img { width:100%; height:150px; object-fit:cover; }
+.menu-card p { text-align:center; margin:5px 0; }
+.menu-name { font-weight:600; color:#333; }
+.menu-price { color:#ff5722; font-weight:500; }
+
+</style>
+</head>
+<body>
+
+<!-- BOTTOM NAVBAR -->
+
+<div class="bottom-navbar">
+    <div class="nav-item"><a href="home.html"><span class="nav-icon">🏠</span><p>Beranda</p></a></div>
+    <div class="nav-item active"><a href="menu.html"><span class="nav-icon">📋</span><p>Menu</p></a></div>
+    <div class="nav-item"><a href="voucher.html"><span class="nav-icon">🎟️</span><p>Voucher</p></a></div>
+    <div class="nav-item"><a href="pesanan.html"><span class="nav-icon">🧾</span><p>Pesanan</p></a></div>
+    <div class="nav-item"><a href="profile.html"><span class="nav-icon">👤</span><p>Saya</p></a></div>
+</div>
+
+<!-- ================= MENU SECTION ================= -->
+<div class="menu-section">
+    
+    <!-- Spesial Hari Ini -->
+    <h3 class="menu-title">Spesial Hari Ini</h3>
+    <div class="menu-items">
+        <div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+<div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+<div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+<div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+<div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+<div class="menu-card">
+            <a href="product-detail.html?name=Kopi%20Susu&price=25000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Kopi%20susu%20lembut%20dengan%20rasa%20manis%20dan%20creamy.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Kopi Susu">
+            </a>
+            <p class="menu-name">Kopi Susu</p>
+            <p class="menu-price">Rp 25.000</p>
+        </div>
+        <div class="menu-card">
+            <a href="product-detail.html?name=Latte&price=30000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Latte%20manis%20dengan%20rasa%20coklat%20dan%20susu.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Latte">
+            </a>
+            <p class="menu-name">Latte</p>
+            <p class="menu-price">Rp 30.000</p>
+        </div>
+        <div class="menu-card">
+            <a href="product-detail.html?name=Espresso&price=20000&img=https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w&desc=Espresso%20strong%20dengan%20rasa%20kopi%20yang%20kaya.">
+                <img src="https://static1.squarespace.com/static/5fa1095912d2fc6dfc63ac9c/5fadfe28dd1d4d0520f2d540/60a34128d1c1f244809be5dc/1621311946163/Light+Coffee+Series+Menu+-+Kopi+Kenangan.jpg?format=1500w" alt="Espresso">
+            </a>
+            <p class="menu-name">Espresso</p>
+            <p class="menu-price">Rp 20.000</p>
+        </div>
+    </div>
+
+    <!-- Baru! -->
+    <h3 class="menu-title">Baru!</h3>
+    <div class="menu-items">
+        <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Toffee Nut Latte</p>
+            <p class="menu-price">Rp 19.000</p>
+        </div>
+        <div class="menu-card">
+            <a href="product-detail.html?name=Matcha%20Latte&price=32000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt=&desc=Matcha%20Latte%20lembut%20dengan%20rasa%20teh%20hijau%20dan%20susu.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt=" alt="Matcha Latte">
+            </a>
+            <p class="menu-name">Toffee Nut Aren</p>
+            <p class="menu-price">Rp 50.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Toffee Nut Oat</p>
+            <p class="menu-price">Rp 40.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Toffee Nut Choco</p>
+            <p class="menu-price">Rp 30.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Ice Cream Choco</p>
+            <p class="menu-price">Rp 16.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Ice Cream Glaze</p>
+            <p class="menu-price">Rp 12.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Choco Cream</p>
+            <p class="menu-price">Rp 32.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Cappuccino&price=28000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w&desc=Cappuccino%20dengan%20busa%20susu%20lembut%20dan%20kopi%20aromatik.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/78c0c381-e815-4b72-8716-1e978d0f2828/DCSAsset+3.png?format=750w" alt="Cappuccino">
+            </a>
+            <p class="menu-name">Cappuccino</p>
+            <p class="menu-price">Rp 30.000</p>
+        </div>
+
+    </div>
+
+    <!-- Makanan -->
+    <h3 class="menu-title">Makanan</h3>
+    <div class="menu-items">
+        <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+        <div class="menu-card">
+            <a href="product-detail.html?name=Chicken%20Wings&price=40000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/291236ae-1ad5-4e42-ad94-ce7b5f39dada/DCSChocolate+Milk+Bun.png?format=750w&desc=Chicken%20Wings%20crispy%20dan%20juicy%20dengan%20saus%20lezat.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/291236ae-1ad5-4e42-ad94-ce7b5f39dada/DCSChocolate+Milk+Bun.png?format=750w" alt="Chicken Wings">
+            </a>
+            <p class="menu-name">Chicken Wings</p>
+            <p class="menu-price">Rp 40.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+ <div class="menu-card">
+            <a href="product-detail.html?name=Burger&price=35000&img=https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w&desc=Burger%20lembut%20dengan%20daging%20dan%20topping%20melimpah.">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/3d82fee5-aeb4-441f-a075-b9705be0c6f2/DCSVanilla+Milk+Bun.png?format=750w" alt="Burger">
+            </a>
+            <p class="menu-name">Burger</p>
+            <p class="menu-price">Rp 35.000</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
