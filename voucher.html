@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voucher - Coffee Shop</title>
+<style>
+    /* RESET */
+    * { box-sizing: border-box; margin:0; padding:0; font-family: 'Poppins', sans-serif; }
+
+
+body { 
+    background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+    min-height: 100vh; padding-bottom: 80px; 
+}
+
+/* BOTTOM NAVBAR */
+.bottom-navbar {
+    position: fixed; bottom:0; left:0; width:100%; height:60px;
+    background:#fff; display:flex; justify-content:space-around;
+    align-items:center; box-shadow: 0 -3px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+}
+.bottom-navbar .nav-item a, .bottom-navbar .nav-item {
+    display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#555;
+    font-size:12px; cursor:pointer; transition: color 0.3s;
+}
+.bottom-navbar .nav-item.active a, .bottom-navbar .nav-item.active { color:#ff5722; }
+.bottom-navbar .nav-item:hover a { color:#ff5722; }
+
+/* VOUCHER SECTION */
+.voucher-section { padding: 30px 20px; }
+.section-title { font-size: 2rem; color:#333; margin-bottom:25px; font-weight:700; text-align:center; }
+
+.voucher-items {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap:20px;
+}
+
+/* CARD GLASS EFFECT */
+.voucher-card {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    overflow:hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display:flex; flex-direction: column; justify-content: space-between;
+    padding-bottom: 15px;
+}
+.voucher-card:hover { transform: translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.25); }
+
+.voucher-card img { width:100%; height:140px; object-fit:cover; border-top-left-radius:25px; border-top-right-radius:25px; }
+
+.voucher-content { padding:15px; text-align:center; }
+
+.voucher-name { font-weight:700; font-size:1.1rem; color:#fff; margin-bottom:5px; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+.voucher-discount { color:#ffeb3b; font-weight:700; font-size:1.2rem; margin-bottom:10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.4); }
+
+.claim-btn {
+    display:inline-block; padding:8px 18px; background:#ff5722; color:#fff;
+    font-weight:600; border-radius:50px; text-decoration:none; transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.claim-btn:hover { background:#fff; color:#ff5722; box-shadow:0 6px 15px rgba(0,0,0,0.3); }
+
+/* BADGE STYLISH */
+.voucher-badge {
+    position: absolute; top:12px; left:12px; background:#ff3e00; color:#fff;
+    padding:5px 12px; border-radius:12px; font-weight:700; font-size:0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+}
+.voucher-badge.hot { background:#ff1744; }
+.voucher-badge.new { background:#00e676; }
+.voucher-badge.limited { background:#d500f9; }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.05); opacity:0.85; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- BOTTOM NAVBAR -->
+
+<div class="bottom-navbar">
+    <div class="nav-item"><a href="home.html"><span class="nav-icon">🏠</span><p>Beranda</p></a></div>
+    <div class="nav-item"><a href="menu.html"><span class="nav-icon">📋</span><p>Menu</p></a></div>
+    <div class="nav-item active"><a href="voucher.html"><span class="nav-icon">🎟️</span><p>Voucher</p></a></div>
+    <div class="nav-item"><a href="pesanan.html"><span class="nav-icon">🧾</span><p>Pesanan</p></a></div>
+    <div class="nav-item"><a href="profile.html"><span class="nav-icon">👤</span><p>Saya</p></a></div>
+</div>
+
+<!-- VOUCHER SECTION -->
+
+<div class="voucher-section">
+    <h3 class="section-title">Voucher Promo Terbaru</h3>
+    <div class="voucher-items">
+    <div class="voucher-card">
+        <span class="voucher-badge hot">HOT</span>
+        <img src="https://awsimages.detik.net.id/community/media/visual/2024/10/16/es-kopi-susu-gula-aren-2_169.jpeg?w=1200" alt="Voucher 50%">
+        <div class="voucher-content">
+            <p class="voucher-name">Kopi Susu Premium</p>
+            <p class="voucher-discount">Diskon 50%</p>
+            <a href="#" class="claim-btn">Klaim Voucher</a>
+        </div>
+    </div>
+
+    <div class="voucher-card">
+        <span class="voucher-badge new">NEW</span>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Voucher 30%">
+        <div class="voucher-content">
+            <p class="voucher-name">Cappuccino Special</p>
+            <p class="voucher-discount">Diskon 30%</p>
+            <a href="#" class="claim-btn">Klaim Voucher</a>
+        </div>
+    </div>
+
+    <div class="voucher-card">
+        <span class="voucher-badge limited">LIMITED</span>
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Voucher 10%">
+        <div class="voucher-content">
+            <p class="voucher-name">Chicken Wings Combo</p>
+            <p class="voucher-discount">Diskon 10%</p>
+            <a href="#" class="claim-btn">Klaim Voucher</a>
+        </div>
+    </div>
+
+    <div class="voucher-card">
+        <span class="voucher-badge hot">HOT</span>
+        <img src="https://awsimages.detik.net.id/community/media/visual/2024/10/16/es-kopi-susu-gula-aren-2_169.jpeg?w=1200" alt="Voucher 20%">
+        <div class="voucher-content">
+            <p class="voucher-name">Mocha Latte</p>
+            <p class="voucher-discount">Diskon 20%</p>
+            <a href="#" class="claim-btn">Klaim Voucher</a>
+        </div>
+    </div>
+
+    <div class="voucher-card">
+        <span class="voucher-badge new">NEW</span>
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Voucher 40%">
+        <div class="voucher-content">
+            <p class="voucher-name">Americano Spesial</p>
+            <p class="voucher-discount">Diskon 40%</p>
+            <a href="#" class="claim-btn">Klaim Voucher</a>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
