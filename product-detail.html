@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product-detail-container">
+    <button onclick="window.history.back()" class="back-btn">← Kembali</button>
+
+    <div class="product-image">
+        <img id="product-img" src="" alt="Produk">
+    </div>
+
+    <div class="product-info">
+        <h2 id="product-name"></h2>
+        <p id="product-price"></p>
+        <p class="product-desc"></p>
+
+        <div class="quantity-selector">
+            <button id="decrease-btn">-</button>
+            <span id="quantity">1</span>
+            <button id="increase-btn">+</button>
+        </div>
+
+        <button id="add-to-cart-btn" class="add-cart-btn">Tambah ke Keranjang 🛒</button>
+    </div>
+</div>
+
+<script src="product-detail.js"></script>
+</body>
+</html>
